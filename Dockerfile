@@ -50,4 +50,4 @@ COPY <<EOF auth.json
 ${AUTH_JSON}
 EOF
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/secrets/supervisord.conf"]
+CMD ["./run-tailscale.sh"]
