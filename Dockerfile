@@ -35,8 +35,8 @@ COPY <<EOF /etc/supervisord.conf
 nodaemon=true
 user=root
 
-[program:hydroxide]
-command=hydroxide -smtp-host 0.0.0.0 -imap-host 0.0.0.0 -disable-carddav serve
+[program:tailscale]
+command=bash /hydroxide/run-tailscale.sh
 autorestart=true
 stdout_logfile=/dev/stdout
 stdout_logfile_maxbytes=0
@@ -50,4 +50,4 @@ COPY <<EOF auth.json
 ${AUTH_JSON}
 EOF
 
-CMD ["/run-tailscale.sh"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
