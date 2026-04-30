@@ -50,4 +50,4 @@ COPY <<EOF auth.json
 ${AUTH_JSON}
 EOF
 
-CMD ["./run-tailscale.sh"]
+CMD ["bash run-tailscale.sh"]
