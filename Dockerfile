@@ -37,11 +37,6 @@ user=root
 
 [program:tailscale]
 command=bash /hydroxide/run-tailscale.sh
-autorestart=true
-stdout_logfile=/dev/stdout
-stdout_logfile_maxbytes=0
-stderr_logfile=/dev/stderr
-stderr_logfile_maxbytes=0
 EOF
 
 WORKDIR /hydroxide
