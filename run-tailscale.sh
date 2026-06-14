@@ -12,7 +12,7 @@ echo "Tailscale is up."
 /usr/bin/hydroxide -smtp-host 0.0.0.0 -imap-host 0.0.0.0 -disable-carddav serve &
 HYDROXIDE_PID=$!
 
-socat TCP4-LISTEN:80,fork,reuseaddr SOCKS5:127.0.0.1:1055:100.75.146.49:80 &
+socat TCP4-LISTEN:80,fork,reuseaddr SOCKS5:127.0.0.1:1055:100.66.66.66:80 &
 SOCAT_PID=$!
 
 wait -n ${TAILSCALED_PID} ${HYDROXIDE_PID} ${SOCAT_PID}
